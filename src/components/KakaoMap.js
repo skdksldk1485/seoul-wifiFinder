@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { findWifiLocations } from '../services/wifiAPI';
+import { findWifiLocations } from '../services/findWifiAPI';
 const { kakao } = window;
 
 export default function Map({ district, userLocation }) {
@@ -7,11 +7,11 @@ export default function Map({ district, userLocation }) {
   const [wifiLocation, setWifiLocation] = useState([]);
   const mapElement = useRef(null);
 
-  // Initialize map
+
   useEffect(() => {
     const options = {
-      center: new kakao.maps.LatLng(37.5326, 126.99),
-      level: 9
+      center: new kakao.maps.LatLng(37.51752, 127.04746),
+      level: 7
     };
 
     // 지도를 생성
@@ -24,24 +24,22 @@ export default function Map({ district, userLocation }) {
     setMap(map);
   }, []);
 
-  // Fetch API location data
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const locations = await findWifiLocations();
-        // handle success
-        console.log(locations);
+
+        // console.log(locations);
         setWifiLocation(locations);
-        console.log(3);
       } catch (error) {
-        // handle error
         console.log(error);
       }
     };
     fetchData();
   }, []);
 
-  // Create clusterer and set markers
+
   useEffect(() => {
     if (map !== null) {
       const clusterer = new kakao.maps.MarkerClusterer({
@@ -55,9 +53,9 @@ export default function Map({ district, userLocation }) {
           //마커가 표시 될 지도
           map: map,
           //마커가 표시 될 위치
-          position: new kakao.maps.LatLng(el.WGS84_Y, el.WGS84_X),
-          //마커에 hover시 나타날 title
-          title: el.NAME_ENG
+          position: new kakao.maps.LatLng(el.LNT, el.LAT),
+          //마커에 hover시 나타날 주소
+          title: el.X_SWIFI_ADRES2
         });
       });
 

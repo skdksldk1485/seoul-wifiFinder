@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import KakaoMap from './components/KakaoMap';
+import Header from './components/Header';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,6 +29,7 @@ function App() {
   return (
     <div>
         <GlobalStyle />
+        <Header/>        
         <KakaoMap district={district} userLocation={userLocation} />
     </div>
   );

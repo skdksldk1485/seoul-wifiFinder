@@ -63,6 +63,52 @@ export default function Map({ district, userLocation }) {
     }
   }, [wifiLocation, map]);
 
+  // 사용자 위치
+  useEffect(() => {
+    if (map !== null) {
+      const { lat, lng } = userLocation;
+      if (lat !== 0 && lng !== 0) {
+        const locPosition = new kakao.maps.LatLng(lat, lng);
+        const message =
+          '<div style="padding:5px; width: 150px; color: #3b8686;"><b>현재 내 위치!</b></div>';
+        map.setLevel(4);
+        displayMarker(locPosition, message);
+
+        function displayMarker(locPosition, message) {
+          const imageSrc =
+            'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png';
+          // 마커 이미지의 이미지 크기 입니다
+          const imageSize = new kakao.maps.Size(24, 35);
+
+          // 마커 이미지를 생성합니다
+          const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+          // 마커를 생성합니다
+          const marker = new kakao.maps.Marker({
+            map: map,
+            position: locPosition,
+            image: markerImage, // 마커 이미지
+          });
+
+          const iwContent = message, // 인포윈도우에 표시할 내용
+            iwRemoveable = true;
+
+          // 인포윈도우를 생성합니다
+          const infowindow = new kakao.maps.InfoWindow({
+            content: iwContent,
+            removable: iwRemoveable,
+          });
+
+          // 인포윈도우를 마커위에 표시합니다
+          infowindow.open(map, marker);
+
+          // 지도 중심좌표를 접속위치로 변경합니다
+          map.setCenter(locPosition);
+        }
+      }
+    }
+  }, [userLocation, map]);
+
 
   return (
     <div ref={mapElement} style={{ width: '100vw', height: '100vh' }}></div>

@@ -26,10 +26,21 @@ function App() {
     lng: 0,
   });
 
+  const onUserInputDistrict = value => {
+    setDistrict(value);
+  };
+
+  const onUserLocation = (lat, lng) => {
+    setUserLocation({ lat, lng }); // why object? to use key value rather than index of array
+  };
+
   return (
     <div>
         <GlobalStyle />
-        <Header/>        
+        <Header
+          onSearch={onUserInputDistrict}
+          onLocation={onUserLocation}
+        />
         <KakaoMap district={district} userLocation={userLocation} />
     </div>
   );

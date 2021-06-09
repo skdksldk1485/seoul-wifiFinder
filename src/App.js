@@ -26,17 +26,18 @@ function App() {
     lng: 0,
   });
 
+
   const onUserInputDistrict = value => {
     setDistrict(value);
   };
 
   const onUserLocation = (lat, lng) => {
-    setUserLocation({ lat, lng }); // why object? to use key value rather than index of array
+    setUserLocation({ lat, lng });
   };
 
   return (
     <div>
-        <GlobalStyle />
+      <GlobalStyle />
         <Header
           onSearch={onUserInputDistrict}
           onLocation={onUserLocation}

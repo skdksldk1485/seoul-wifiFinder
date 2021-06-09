@@ -23,6 +23,9 @@ const Logo = styled.a`
 
 `;
 
+const SearchContainer = styled.div`
+
+`;
 
 const SearchInput = styled.input`
   background-color: transparent;
@@ -30,6 +33,7 @@ const SearchInput = styled.input`
   border-width: 0 0 2px;
   width: 170px;
   height: 30px;
+
 `;
 
 const SearchBtn = styled.button`
@@ -41,15 +45,7 @@ const SearchBtn = styled.button`
   &:hover {
     color: #548687;
   }
-`;
 
-const SwitchContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  p {
-    font-size: 0.8rem;
-  }
 `;
 
 const MyLocation = styled.button`
@@ -97,6 +93,15 @@ const Header = ({ onSearch, onLocation, onThemeColor }) => {
     <>
       <Nav>
         <Logo href='/'>SeoulWifi</Logo>
+        <SearchContainer>
+          <SearchBtn onClick={onSubmit}>SEARCH</SearchBtn>
+          <SearchInput
+            type='text'
+            placeholder='e.g. 서울역(Seoul station)'
+            ref={inputElement}
+            onKeyDown={onKeyPress}
+          />
+        </SearchContainer>
         <NavTool>
           <MyLocation onClick={getCurrentLocation}>MY LOCATION</MyLocation>
         </NavTool>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import KakaoMap from './components/KakaoMap';
 import Header from './components/Header';
+import { darkTheme, lightTheme } from './components/theme';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -26,6 +27,7 @@ function App() {
     lng: 0,
   });
 
+  const [themeColor, setThemeColor] = useState('dark');
 
   const onUserInputDistrict = value => {
     setDistrict(value);
@@ -35,14 +37,21 @@ function App() {
     setUserLocation({ lat, lng });
   };
 
+  const onThemeColorChange = value => {
+    setThemeColor(value);
+  };
+
   return (
     <div>
-      <GlobalStyle />
+      <ThemeProvider theme={themeColor === 'dark' ? darkTheme : lightTheme}>
+        <GlobalStyle />
         <Header
           onSearch={onUserInputDistrict}
           onLocation={onUserLocation}
+          onThemeColor={onThemeColorChange}
         />
         <KakaoMap district={district} userLocation={userLocation} />
+      </ThemeProvider>
     </div>
   );
 }

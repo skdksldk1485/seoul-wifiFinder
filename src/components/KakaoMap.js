@@ -63,6 +63,27 @@ export default function Map({ district, userLocation }) {
     }
   }, [wifiLocation, map]);
 
+  // 검색어 위치
+  useEffect(() => {
+    if (map !== null) {
+      const ps = new kakao.maps.services.Places();
+
+      const placesSearchCB = (data, status, pagination) => {
+        if (status === kakao.maps.services.Status.OK) {
+          const bounds = new kakao.maps.LatLngBounds();
+          for (let i = 0; i < data.length; i++) {
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+          }
+          map.setBounds(bounds);
+        }
+      };
+      // 키워드로 장소를 검색합니다
+      if (district !== '') {
+        ps.keywordSearch(district, placesSearchCB);
+      }
+    }
+  }, [wifiLocation, district, map]);
+
   // 사용자 위치
   useEffect(() => {
     if (map !== null) {

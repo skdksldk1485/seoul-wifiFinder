@@ -11,7 +11,13 @@ const Nav = styled.div`
   font-family: 'Lato', sans-serif;
   padding: 0 60px;
   height: 100px;
-
+  
+  @media ${({ theme }) => theme.device.mobile} {
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  } ;
 `;
 
 const NavTool = styled.div`
@@ -19,6 +25,18 @@ const NavTool = styled.div`
   align-items: center;
   margin-left: -180px;
 
+  @media ${({ theme }) => theme.device.tablet} {
+    margin-left: -12px;
+    p {
+      display: none;
+    }
+  }
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-left: 0;
+    p {
+      display: none;
+    }
+  } ;
 `;
 
 const Logo = styled.a`
@@ -26,10 +44,17 @@ const Logo = styled.a`
   color: ${({ theme }) => theme.colors.color};
   font-size: 1.8rem;
 
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  } ;
 `;
 
 const SearchContainer = styled.div`
-
+  @media ${({ theme }) => theme.device.mobile} {
+    text-align: center;
+    margin-bottom: 10px;
+  } ;
 `;
 
 const SearchInput = styled.input`
@@ -40,6 +65,10 @@ const SearchInput = styled.input`
   border-color: ${({ theme }) => theme.colors.color};
   width: 170px;
   height: 30px;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    border-width: 0 0 1px;
+  } ;
 `;
 
 const SearchBtn = styled.button`
@@ -52,6 +81,10 @@ const SearchBtn = styled.button`
   &:hover {
     color: #548687;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 0.8rem;
+  } ;
 `;
 
 const SwitchContainer = styled.div`
@@ -77,6 +110,10 @@ const MyLocation = styled.button`
     background-color: ${({ theme }) => theme.colors.btnFontColor};
     color: #a8dba8;
   }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 140px;
+  } ;
 `;
 
 const Header = ({ onSearch, onLocation, onThemeColor }) => {

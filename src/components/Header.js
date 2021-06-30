@@ -121,21 +121,16 @@ const Header = ({ onSearch, onLocation, onThemeColor }) => {
       <Nav>
         <Logo href='/'>SeoulWifi</Logo>
         <SearchContainer>
-          <SearchBtn onClick={onSubmit}>SEARCH</SearchBtn>
+          <SearchBtn onClick={onSubmit}>장소검색</SearchBtn>
           <SearchInput
             type='text'
-            placeholder='e.g. 서울역(Seoul station)'
+            placeholder='검색할 장소 입력'
             ref={inputElement}
             onKeyDown={onKeyPress}
           />
         </SearchContainer>
         <NavTool>
           <SwitchContainer>
-            {theme.name === 'dark' ? (
-              <p>Switch to Light Mode</p>
-            ) : (
-              <p>Switch to Dark Mode</p>
-            )}
             <Switch
               isOn={theme.name === 'light'}
               onColor='#333'
@@ -143,7 +138,7 @@ const Header = ({ onSearch, onLocation, onThemeColor }) => {
             ></Switch>
           </SwitchContainer>
 
-          <MyLocation onClick={getCurrentLocation}>MY LOCATION</MyLocation>
+          <MyLocation onClick={getCurrentLocation}>현재 장소</MyLocation>
         </NavTool>
       </Nav>
     </>

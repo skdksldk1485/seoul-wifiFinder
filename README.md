@@ -21,6 +21,7 @@
 
 <br />
 ### ⚡ 지도 위치검색
+
 ![Animation2](https://user-images.githubusercontent.com/29578054/134920746-414b8a2a-1d19-4e62-b0e5-f458f6b2f49a.gif)
 <br />
 

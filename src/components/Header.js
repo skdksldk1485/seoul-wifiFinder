@@ -7,7 +7,6 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.headerBackground};
-
   font-family: 'Lato', sans-serif;
   padding: 0 60px;
   height: 100px;

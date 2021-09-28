@@ -18,10 +18,10 @@
 <br />
 
 ### ⚡ 지도 확대 & 축소
-
+![Animation7_2](https://user-images.githubusercontent.com/29578054/135106474-27788773-d7a5-4357-a1c6-dd8e79da9963.gif)
 <br />
-### ⚡ 지도 위치검색
 
+### ⚡ 지도 위치검색
 ![Animation2](https://user-images.githubusercontent.com/29578054/134920746-414b8a2a-1d19-4e62-b0e5-f458f6b2f49a.gif)
 <br />
 
@@ -34,6 +34,13 @@
 <br />
 
 ### ⚡ 반응형 웹
+![캡처2](https://user-images.githubusercontent.com/29578054/135106562-c14ae807-96a6-43c3-946c-75a5db6c0923.PNG)
+![캡처3](https://user-images.githubusercontent.com/29578054/135106604-75b7fe74-b375-4304-8349-89aa4f8b005d.PNG)
+<br />
+
+
+
+
 
 
 

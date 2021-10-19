@@ -1,5 +1,7 @@
 ## 프로젝트
-카카오 지도 API와 서울시 열린데이터 광장 API를 이용한 서울시 위치정보확인 프로젝트입니다.
+지도 API를 이용한 서비스를 구현해보자는 취지로 개발한 프로젝트 입니다.<br />
+밖에서 핸드폰 데이터가 떨어져가서 급하게 와이파이가 필요할때, **서울시의 와이파이가 설치된 곳의 위치 정보를 검색하고 확인** 할 수 있는<br />
+카카오 지도 API와 서울시 열린데이터 광장 API를 이용한 **서울시 위치정보확인 프로젝트**입니다.
 
 <br />
 
@@ -19,8 +21,8 @@
 
 ### ⚡ 지도 확대 & 축소
 ![Animation7_3](https://user-images.githubusercontent.com/29578054/135300175-2a3aa2df-f38a-4169-a871-2b50b62ea96e.gif)
-Kakao map api에서 제공하는 MarkerClusterer를 이용하여 위치 마커 정보를 클러스터화 하였습니다.<br />
-그리고, useEffect를 이용하여 Zoom Level에 따라 다른 Marker 표시되도록 구현함으로써<br />
+Kakao map api에서 제공하는 **MarkerClusterer를 이용하여 위치 마커 정보를 클러스터화** 하였습니다.<br />
+그리고, **useEffect를 이용하여 Zoom Level에 따라 다른 Marker 표시되도록 구현**함으로써<br />
 지도의 확대와 축소가 가능하며, 오른쪽 상단의 줌 컨트롤러를 이용하여 확대 축소도 가능합니다.
 <br />
 
@@ -33,13 +35,13 @@ Kakao map api에서 제공하는 MarkerClusterer를 이용하여 위치 마커 �
 ### ⚡ 사용자 현재 위치 검색
 ![Animation3](https://user-images.githubusercontent.com/29578054/134920837-bc25e912-bc3f-4756-a1f0-1f5ea9dcda49.gif)
 <br />
-geolocation을 이용함으로써, 사용자의 현재 위치를 보여주도록 구현하였습니다.
+**geolocation**을 이용함으로써, 사용자의 현재 위치를 보여주도록 구현하였습니다.
 <br />
 
 ### ⚡ 다크&라이트 모드
 ![Animation5](https://user-images.githubusercontent.com/29578054/134921021-2094e2b6-eb06-4ad8-8623-411f43c62877.gif)
 <br />
-헤더 부분의 스위치를 통해 다크&라이트 모드 변경이 가능하도록 구현했습니다.
+**헤더 부분의 스위치**를 통해 다크&라이트 모드 변경이 가능하도록 구현했습니다.
 <br />
 
 ### ⚡ 반응형 웹

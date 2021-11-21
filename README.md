@@ -13,10 +13,8 @@
 
 
 ## 📗사용기술
-- HTML5 / CSS3
-- JavaScript(ES6+)
-- React
-- Styled-components
+  - Front End
+    - HTML5 / CSS3, React, Styled-components, JavaScript(ES6+)
 
 <br />
 

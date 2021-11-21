@@ -14,7 +14,10 @@
 
 ## 📗사용기술
   - Front End
-    - HTML5 / CSS3, React, Styled-components, JavaScript(ES6+)
+    - HTML5 / CSS3
+    - React
+    - Styled-components
+    - JavaScript(ES6+)
 
 <br />
 

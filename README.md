@@ -54,6 +54,14 @@ https://user-images.githubusercontent.com/29578054/142731905-8ec43468-1dcb-4c7e-
 
 <br />
 
+## ⚡ 반응형 웹
+![캡처2](https://user-images.githubusercontent.com/29578054/135106562-c14ae807-96a6-43c3-946c-75a5db6c0923.PNG)
+<br />
+![캡처3](https://user-images.githubusercontent.com/29578054/135300204-e18d1cfc-b47d-4b24-bab2-881287800567.PNG)
+<br />
+<strong>데스크탑, 아이패드, 모바일</strong> 순으로 반응형 웹을 구현하였습니다.
+<br />
+
 ## 🌵 후기
 카카오 맵 API를 다루며 서울시 데이터를 지도에 시각적으로 나타내어 사용자 편의 맞게 구성하는 것을 목표로 프로젝트를 개발하였습니다. <br />
 평소 코로나 마스크 맵과 같이 사용자가 원하는 데이터를 지도에 띄우고 사용자는 필요한 정보를 주는 서비스를 개발해보고 싶었는데<br />
